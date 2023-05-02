@@ -1,4 +1,4 @@
-export interface Show {
+export interface ShowStructure {
   id: number;
   name: string;
   vote_average: number;
@@ -7,7 +7,7 @@ export interface Show {
   poster_path: string;
 }
 
-export type Shows = Show[];
+export type Shows = ShowStructure[];
 
 export interface ApiResponse {
   page: number;
