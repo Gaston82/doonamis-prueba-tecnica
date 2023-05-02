@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import useShows from "../../hooks/useShows/useShows";
 import { useAppSelector } from "../../store/hooks";
+import "./Shows.scss";
 
 const Shows = (): JSX.Element => {
   const { getAllShows } = useShows();
