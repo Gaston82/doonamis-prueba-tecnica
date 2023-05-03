@@ -13,7 +13,7 @@ const Shows = (): JSX.Element => {
     })();
   }, []);
 
-  const shows = useAppSelector((state) => state.shows);
+  const shows = useAppSelector((state) => state.shows.shows);
 
   return (
     <ul className="shows-grid">
