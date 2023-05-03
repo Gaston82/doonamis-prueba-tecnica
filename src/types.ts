@@ -13,3 +13,8 @@ export interface ApiResponse {
   page: number;
   results: Shows;
 }
+
+export interface ShowState {
+  currentShow: ShowStructure;
+  shows: Shows;
+}
