@@ -16,6 +16,12 @@ module.exports = {
         "@typescript-eslint/naming-convention": "off",
       },
     },
+    {
+      files: ["src/vite-env.d.ts", "src/env.d.ts"],
+      rules: {
+        "@typescript-eslint/triple-slash-reference": "off",
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: "latest",
