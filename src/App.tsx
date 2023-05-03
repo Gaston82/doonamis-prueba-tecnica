@@ -1,17 +1,9 @@
 import "./App.scss";
+import Layout from "./components/Layout/Layout";
 import Shows from "./components/Shows/Shows";
 
 function App() {
-  return (
-    <>
-      <header>
-        <h1>Shows Finder</h1>
-      </header>
-      <main>
-        <Shows />
-      </main>
-    </>
-  );
+  return <Layout />;
 }
 
 export default App;
