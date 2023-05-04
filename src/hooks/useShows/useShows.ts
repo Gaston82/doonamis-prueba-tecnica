@@ -19,9 +19,13 @@ const useShows = () => {
     }
   };
 
-  const getSeriesById = async () => {
+  const getSeriesById = async (id: string) => {
+    const url = import.meta.env.VITE_BASE_URL;
+    const api_Key = import.meta.env.VITE_API_KEY;
+    const language = "en-US";
+
     try {
-      const response = await fetch(import.meta.env.VITE_SERIES_DETAILS_URL);
+      const response = await fetch(`${url}${id}?api_key=${api_Key}`);
       const show = (await response.json()) as ShowStructure;
 
       dispatch(loadShowActionCreator(show));
