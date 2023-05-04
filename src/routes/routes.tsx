@@ -9,7 +9,7 @@ export const routes = [
     element: <App />,
     children: [
       { path: "/", element: <Shows /> },
-      { path: "details/:id", element: <DetailsPage /> },
+      { path: "/:id", element: <DetailsPage /> },
     ],
   },
 ];
