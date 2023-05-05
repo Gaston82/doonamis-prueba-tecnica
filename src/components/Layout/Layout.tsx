@@ -4,9 +4,7 @@ import Header from "../Header/Header";
 const Layout = (): JSX.Element => (
   <>
     <Header />
-    <main>
-      <Outlet />
-    </main>
+    <Outlet />
   </>
 );
 
