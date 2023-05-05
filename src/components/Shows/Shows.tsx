@@ -16,13 +16,15 @@ const Shows = (): JSX.Element => {
   const shows = useAppSelector((state) => state.shows.shows);
 
   return (
-    <ul className="shows-grid">
-      {shows.map((show) => (
-        <li key={show.id}>
-          <Show show={show} />
-        </li>
-      ))}
-    </ul>
+    <main className="series-container">
+      <ul className="series-grid">
+        {shows.map((show) => (
+          <li key={show.id}>
+            <Show show={show} />
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 };
 

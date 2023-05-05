@@ -1,16 +1,11 @@
-.shows-grid {
+@import "../../sass/variables/variables";
+
+.series-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-gap: 1.25rem;
 }
 
-main {
-  padding: 1.5rem;
-}
-
-article {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
+.series-container {
+  padding: $basic-padding;
 }
