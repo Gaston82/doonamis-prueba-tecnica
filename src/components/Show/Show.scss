@@ -1,0 +1,12 @@
+.show-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__image {
+    height: 297px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+}
