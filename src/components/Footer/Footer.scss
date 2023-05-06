@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: space-around;
 
+  &__container {
+    display: flex;
+  }
+
   &__icon {
     width: 35px;
     margin-right: 1rem;

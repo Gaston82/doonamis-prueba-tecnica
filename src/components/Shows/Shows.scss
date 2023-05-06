@@ -6,6 +6,10 @@
   grid-gap: 1.25rem;
 }
 
-.series-container {
+.series {
   padding: $main-padding;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
 }

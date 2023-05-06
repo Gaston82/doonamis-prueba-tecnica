@@ -16,7 +16,8 @@ const Shows = (): JSX.Element => {
   const shows = useAppSelector((state) => state.shows.shows);
 
   return (
-    <main className="series-container">
+    <main className="series">
+      <h2 className="series__title">Series online</h2>
       <ul className="series-grid">
         {shows.map((show) => (
           <li key={show.id}>
