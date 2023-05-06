@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = (): JSX.Element => (
   <header className="header">
     <Link to={"/"}>
-      <h1>Shows Finder</h1>
+      <h1>Series Finder</h1>
     </Link>
   </header>
 );
