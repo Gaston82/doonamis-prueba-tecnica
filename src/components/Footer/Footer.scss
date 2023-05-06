@@ -1,0 +1,14 @@
+@import "../../sass/variables/variables";
+
+.footer {
+  padding: $main-padding;
+  border-top: 1px solid $color-text;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  &__icon {
+    width: 35px;
+    margin-right: 1rem;
+  }
+}
