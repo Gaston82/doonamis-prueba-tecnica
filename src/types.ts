@@ -5,6 +5,7 @@ export interface ShowStructure {
   overview: string;
   first_air_date: string;
   poster_path: string;
+  backdrop_path: string;
 }
 
 export type Shows = ShowStructure[];
