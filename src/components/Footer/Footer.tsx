@@ -9,7 +9,7 @@ const Footer = (): JSX.Element => (
     <Link to={"/"}>
       <h1>Series Finder</h1>
     </Link>
-    <div className="contac-box">
+    <div className="footer__container">
       <a
         href="https://www.linkedin.com/in/gaston-artaza-frontend-developer/"
         target="_blank"
