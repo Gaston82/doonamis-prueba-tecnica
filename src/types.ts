@@ -6,6 +6,13 @@ export interface ShowStructure {
   first_air_date: string;
   poster_path: string;
   backdrop_path: string;
+  credits: Credits;
+  genres: Genre[];
+}
+
+export interface Genre {
+  id: number;
+  name: string;
 }
 
 export type Shows = ShowStructure[];
@@ -18,4 +25,15 @@ export interface ApiResponse {
 export interface ShowState {
   currentShow: ShowStructure;
   shows: Shows;
+}
+
+export interface Cast {
+  id: number;
+  name: string;
+  character?: string;
+}
+
+export interface Credits {
+  cast: Cast[];
+  crew: Cast[];
 }

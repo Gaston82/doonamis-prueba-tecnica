@@ -13,6 +13,7 @@ const DetailsPage = (): JSX.Element => {
   }, [id]);
 
   const series = useAppSelector((state) => state.shows.currentShow);
+  const actors = series.credits.cast.slice(1, 3);
 
   return (
     <>
@@ -29,8 +30,20 @@ const DetailsPage = (): JSX.Element => {
           />
           <div className="details__body">
             <h2>{series.name}</h2>
+            <div className="cast-container">
+              {series.genres.map((genre) => (
+                <span key={genre.id}>{genre.name}</span>
+              ))}
+            </div>
             <span>{series.first_air_date.split("-")[0]!}</span>
-            <p className="details__description">{series.overview}</p>
+            <div className="cast-container">
+              {actors.map((actor) => (
+                <span key={actor.id}>{`${actor.name},`} </span>
+              ))}
+            </div>
+            <div>
+              <p className="details__description">{series.overview}</p>
+            </div>
           </div>
         </article>
       </section>

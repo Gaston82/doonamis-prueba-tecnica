@@ -25,7 +25,9 @@ const useShows = () => {
     const language = "en-US";
 
     try {
-      const response = await fetch(`${url}${id}?api_key=${api_Key}`);
+      const response = await fetch(
+        `${url}${id}?api_key=${api_Key}&append_to_response=credits`
+      );
       const show = (await response.json()) as ShowStructure;
 
       dispatch(loadShowActionCreator(show));
