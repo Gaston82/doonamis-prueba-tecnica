@@ -10,6 +10,12 @@ const initialState: ShowState = {
     first_air_date: "",
     vote_average: 0,
     poster_path: "",
+    backdrop_path: "",
+    genres: [],
+    credits: {
+      cast: [],
+      crew: [],
+    },
   },
 };
 
