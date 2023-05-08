@@ -11,11 +11,16 @@ import { type ShowStructure, type ApiResponse, type Shows } from "../../types";
 
 const useShows = () => {
   const dispatch = useAppDispatch();
+  const url = import.meta.env.VITE_BASE_URL;
+  const api_Key = import.meta.env.VITE_API_KEY;
+  const language = "en-US";
 
   const getAllShows = async () => {
     dispatch(setIsLoadingActionCreator());
     try {
-      const response = await fetch(import.meta.env.VITE_SERIES_URL);
+      const response = await fetch(
+        `${url}popular?api_key=${api_Key}&language=${language}`
+      );
       const shows = (await response.json()) as ApiResponse;
 
       dispatch(loadShowsActionCreator(shows.results));
@@ -27,9 +32,6 @@ const useShows = () => {
 
   const getSeriesById = async (id: string) => {
     dispatch(setIsLoadingActionCreator());
-    const url = import.meta.env.VITE_BASE_URL;
-    const api_Key = import.meta.env.VITE_API_KEY;
-    const language = "en-US";
 
     try {
       const response = await fetch(
