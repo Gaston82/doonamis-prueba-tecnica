@@ -1,14 +1,15 @@
 @import "../../sass/variables/variables";
+@import "../../sass/mixins/mixins";
 
 .footer {
   padding: $main-padding;
   border-top: 1px solid $color-text;
-  display: flex;
+  @include flex(flex, space-around);
   align-items: center;
-  justify-content: space-around;
   background-color: $color-secondary;
+
   &__container {
-    display: flex;
+    @include flex(flex, center);
   }
 
   &__icon {
