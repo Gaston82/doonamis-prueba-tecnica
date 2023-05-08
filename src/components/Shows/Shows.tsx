@@ -3,6 +3,7 @@ import useShows from "../../hooks/useShows/useShows";
 import { useAppSelector } from "../../store/hooks";
 import "./Shows.scss";
 import Show from "../Show/Show";
+import Spinner from "../Spinner/Spinner";
 
 const Shows = (): JSX.Element => {
   const { getAllShows } = useShows();
