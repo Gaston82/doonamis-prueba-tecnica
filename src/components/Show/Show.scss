@@ -1,8 +1,8 @@
 @import "../../sass/variables/variables";
+@import "../../sass/mixins/mixins";
 
 .show {
-  display: flex;
-  justify-content: center;
+  @include flex(flex, center);
   flex-direction: column;
   gap: 0.5rem;
   text-align: center;
