@@ -13,15 +13,17 @@ const DetailsPage = (): JSX.Element => {
   }, [id]);
 
   const series = useAppSelector((state) => state.shows.currentShow);
+
   const actors = series.credits.cast.slice(1, 3);
+  const imageUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
     <>
       <section className="details">
         <img
           className="details__image"
-          src={`https://image.tmdb.org/t/p/original/${series.backdrop_path}`}
-          alt=""
+          src={`${imageUrl}${series?.backdrop_path || series?.poster_path} `}
+          alt={series.name}
         />
         <article className="details__card">
           <img
