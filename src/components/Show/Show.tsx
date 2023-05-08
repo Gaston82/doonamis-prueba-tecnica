@@ -10,14 +10,16 @@ const Show = ({
   show: { first_air_date, name, poster_path, id },
 }: ShowProps): JSX.Element => (
   <Link to={`${id}`}>
-    <article className="show-card">
+    <article className="show">
       <img
-        className="show-card__image"
+        className="show__image"
         src={`https://image.tmdb.org/t/p/w200${poster_path}`}
         alt={name}
       />
       <h3>{name}</h3>
-      <span>{first_air_date.split("-")[0]!}</span>
+      <div className="box-year">
+        <span className="show__year">{first_air_date.split("-")[0]!}</span>
+      </div>
     </article>
   </Link>
 );
